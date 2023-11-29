@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <title>Quiz - Desafío de Matemáticas</title>
+    <style>
+        body {
+            background-image: url(/Images/2828921.jpg);
+            background-size: cover;
+            background-position: center;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        .container {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            height: 100vh;
+        }
+
+        .card {
+            background-color: rgba(255, 255, 255, 0.9);
+            padding: 40px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            max-width: 600px;
+        }
+
+        .text-primary {
+            color: #007bff;
+        }
+
+        h2 {
+            font-size: 28px;
+            font-weight: bold;
+            margin-bottom: 20px;
+        }
+
+        .question {
+            font-size: 24px;
+            margin-bottom: 30px;
+        }
+
+        .options {
+            display: flex;
+            justify-content: center;
+            flex-wrap: wrap;
+            gap: 10px;
+        }
+
+        .option {
+            padding: 10px 20px;
+            border-radius: 5px;
+            background-color: #007bff;
+            color: #fff;
+            text-decoration: none;
+            transition: background-color 0.3s ease;
+        }
+
+        .option:hover {
+            background-color: #0056b3;
+        }
+
+        .question-image img {
+            max-width: 100%;
+            border-radius: 5px;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+
+<body>
+    <div class="container">
+        <!-- Tarjetas para las preguntas -->
+        <div class="card" id="question1" style="display: none;">
+            <h2 class="text-primary">Desafío de Matemáticas</h2>
+            <!-- Preguntas (15 en total) -->
+            <div class="questions" ">
+                <!-- Pregunta 1 -->
+                <div class=" question" id="question1">
+                <div class="question-image">
+                    <img src="/Images/Img_Ques_1.png" alt="Imagen relacionada con la pregunta 1" />
+                </div>
+                <p class="question-text">¿Cuál es el área de la figura 1?</p>
+                <div class="options">
+                    <a class="option" href="#" onclick="showNextQuestion()">6</a>
+                    <a class="option" href="#" onclick="showNextQuestion()">8</a>
+                    <a class="option" href="#" onclick="showNextQuestion()">5</a>
+                    <a class="option" href="#" onclick="showNextQuestion()">10</a>
+                </div>
+            </div>
+        </div>
+        <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
+    </div>
+    <div class="card" id="question2" style="display: none;">
+        <!-- Pregunta 2 -->
+        <h2>Pregunta 2</h2>
+        <p>¿Cuántos continentes hay en el mundo?</p>
+        <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
+    </div>
+    <!-- Agregar más tarjetas para las otras preguntas -->
+    <div class="card" id="question3" style="display: none;">
+        <h2>Pregunta 3</h2>
+        <p>¿Quién pintó la Mona Lisa?</p>
+        <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
+    </div>
+    <div class="card" id="question4" style="display: none;">
+        <h2>Pregunta 4</h2>
+        <p>¿Cuál es el resultado de 5 + 7?</p>
+        <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
+    </div>
+    <div class="card" id="question5" style="display: none;">
+        <h2>Pregunta 5</h2>
+        <p>¿Cuál es el océano más grande del mundo?</p>
+        <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
+    </div>
+    <div class="card" id="question6" style="display: none;">
+        <h2>Pregunta 6</h2>
+        <p>¿Cuál es la fórmula química del agua?</p>
+        <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
+    </div>
+    <div class="card" id="question7" style="display: none;">
+        <h2>Pregunta 7</h2>
+        <p>¿Cuál es la montaña más alta del mundo?</p>
+        <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
+    </div>
+    <div class="card" id="question8" style="display: none;">
+        <h2>Pregunta 8</h2>
+        <p>¿En qué año comenzó la Segunda Guerra Mundial?</p>
+        <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
+    </div>
+    <div class="card" id="question9" style="display: none;">
+        <h2>Pregunta 9</h2>
+        <p>¿Quién escribió "Don Quijote de la Mancha"?</p>
+        <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
+    </div>
+    <div class="card" id="question10" style="display: none;">
+        <h2>Pregunta 10</h2>
+        <p>¿Cuál es la raíz cuadrada de 144?</p>
+        <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
+    </div>
+    </div>
+
+    <script>
+        // Función para mostrar una pregunta aleatoria y ocultar las demás
+        function showNextQuestion() {
+            const cards = document.querySelectorAll('.card');
+            const randomQuestion = Math.floor(Math.random() * cards.length);
+
+            cards.forEach((card, index) => {
+                if (index === randomQuestion) {
+                    card.style.display = 'block';
+                } else {
+                    card.style.display = 'none';
+                }
+            });
+        }
+
+        // Mostrar una pregunta al cargar la página
+        showNextQuestion();
+    </script>
+</body>
+
+</html>
