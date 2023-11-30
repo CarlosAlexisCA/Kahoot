@@ -106,10 +106,11 @@
                 </div>
                 <p class="question-text">¿Cuál es el área de la figura?</p>
                 <div class="options">
-                    <a class="option correct-answer" href="#">6</a>
-                    <a class="option" href="#">8</a>
-                    <a class="option" href="#">5</a>
-                    <a class="option" href="#">10</a>
+                    <a class="option correct-answer" onclick="checkAnswer(event)" href="#">6</a>
+                    <a class="option" onclick="checkAnswer(event)" href="#">8</a>
+                    <a class="option" onclick="checkAnswer(event)" href="#">5</a>
+                    <a class="option" onclick="checkAnswer(event)" href="#">10</a>
+
                 </div>
             </div>
         </div>
@@ -127,10 +128,19 @@
             <p class="question-text">¿Cuál figura tiene área de 6 centímetros cuadrado?</p>
             <p class="question-text"><img src="/Images/Img_Ques_2_Extra.png" alt=""> es 1 centímetro cuadrado. </p>
             <div class="options">
-                <a class="option correct-answer" href="#">a</a>
-                <a class="option" href="#">b</a>
-                <a class="option" href="#">c</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)"" href=" #">a</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">b</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">c</a>
             </div>
+        </div>
+    </div>
+    <div>
+        <span onclick="openModal()">Abrir Modal</span>
+    </div>
+    <div id="myModal" class="modal" style="display: none;">
+        <div class="modal-content">
+            <span class="close" onclick="closeModal()">&times;</span>
+            <p>Aquí va el contenido del modal</p>
         </div>
     </div>
     <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
@@ -149,10 +159,10 @@
                 cuadrada.</p>
             <p class="question-text">¿Cuál es el área de la figura?</p>
             <div class="options">
-                <a class="option" href="#">9 unidades Cuadradas</a>
-                <a class="option correct-answer" href="#">7 unidades Cuadradas</a>
-                <a class="option" href="#">15 unidades Cuadradas</a>
-                <a class="option" href="#">3 unidades Cuadradas</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">9 unidades²</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)" href="#">7 unidades²</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">15 unidades²</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">3 unidades²</a>
             </div>
         </div>
     </div>
@@ -170,10 +180,10 @@
             <p class="question-text">Cada cuadrado en la retícula es un centímetro cuadrado de 1 x 1. </p>
             <p class="question-text">¿Cuál es al área de la figura? </p>
             <div class="options">
-                <a class="option" href="#">20 centímetros cuadrados.</a>
-                <a class="option" href="#">5 centímetros cuadrados.</a>
-                <a class="option" href="#">35 centímetros cuadrados.</a>
-                <a class="option correct-answer" href="#">12 centímetros cuadrados.</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">20 centímetros cuadrados.</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">5 centímetros cuadrados.</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">35 centímetros cuadrados.</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)" href="#">12 centímetros cuadrados.</a>
             </div>
         </div>
     </div>
@@ -192,10 +202,10 @@
                 cuadrada.</p>
             <p class="question-text">¿Cuál es el área de la figura?</p>
             <div class="options">
-                <a class="option" href="#">20 Unidades cuadradas.</a>
-                <a class="option" href="#">15 Unidades cuadradas.</a>
-                <a class="option correct-answer" href="#">10 Unidades cuadradas.</a>
-                <a class="option" href="#">5 Unidades cuadradas.</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">20 Unidades cuadradas.</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">15 Unidades cuadradas.</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)" href="#">10 Unidades cuadradas.</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">5 Unidades cuadradas.</a>
             </div>
         </div>
     </div>
@@ -212,10 +222,10 @@
             </div>
             <p class="question-text">Encuentra el valor de x en el siguiente triangulo</p>
             <div class="options">
-                <a class="option correct-answer" href="">X = 12</a>
-                <a class="option" href="#">X = √24</a>
-                <a class="option" href="#">X = 24</a>
-                <a class="option" href="#">X = √135</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)" href="">X = 12</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">X = √24</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">X = 24</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">X = √135</a>
             </div>
         </div>
     </div>
@@ -232,10 +242,10 @@
             </div>
             <p class="question-text">Encuentra el valor de x en el siguiente triangulo isósceles.</p>
             <div class="options">
-                <a class="option" href="#">X = 13</a>
-                <a class="option" href="#">X = 22 </a>
-                <a class="option" href="#">X = √44</a>
-                <a class="option" href="#">x = √120</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)" href="#">X = 13</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">X = 22 </a>
+                <a class="option" onclick="checkAnswer(event)" href="#">X = √44</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">x = √120</a>
             </div>
         </div>
     </div>
@@ -254,10 +264,10 @@
                 mas grande es 55 unidades²</p>
             <p class="question-text">¿Cuáles pueden ser las áreas de los cuadrados más pequeños?</p>
             <div class="options">
-                <a class="option correct-answer" href="#">12 y 43</a>
-                <a class="option" href="#">14 y 40</a>
-                <a class="option" href="#">16 y 37</a>
-                <a class="option" href="#">12 y 39</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)" href="#">12 y 43</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">14 y 40</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">16 y 37</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">12 y 39</a>
             </div>
         </div>
     </div>
@@ -274,10 +284,10 @@
             </div>
             <p class="question-text">¿Cuál es la coordenada Y del punto graficado?</p>
             <div class="options">
-                <a class="option" href="#">6</a>
-                <a class="option" href="#">8</a>
-                <a class="option" href="#">5</a>
-                <a class="option correct-answer" href="#">3</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">6</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">8</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">5</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)" href="#">3</a>
             </div>
         </div>
     </div>
@@ -294,9 +304,9 @@
             </div>
             <p class="question-text">Usa el siguiente plano coordenado para escribir el par ordenado de C.</p>
             <div class="options">
-                <a class="option" href="#">(2,2)</a>
-                <a class="option" href="#">(3,2)</a>
-                <a class="option correct-answer" href="#">(3,5)</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">(2,2)</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">(3,2)</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)" href="#">(3,5)</a>
             </div>
         </div>
     </div>
@@ -313,8 +323,8 @@
             </div>
             <p class="question-text">La biblioteca está a 5 unidades del eje y</p>
             <div class="options">
-                <a class="option" href="#">Falso</a>
-                <a class="option correct-answer" href="#">Verdadero</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">Falso</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)" href="#">Verdadero</a>
             </div>
         </div>
     </div>
@@ -331,8 +341,8 @@
             </div>
             <p class="question-text">La escuela se localiza en (0,6)</p>
             <div class="options">
-                <a class="option correct-answer" href="#">Falso</a>
-                <a class="option" href="#">Verdadero</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)" href="#">Falso</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">Verdadero</a>
             </div>
         </div>
     </div>
@@ -349,13 +359,14 @@
             </div>
             <p class="question-text">El banco está a 7 unidades del eje y</p>
             <div class="options">
-                <a class="option correct-answer" href="#">Falso</a>
-                <a class="option" href="#">Verdadero</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)" href="#">Falso</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">Verdadero</a>
             </div>
         </div>
     </div>
     <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
-    </div><div class="card" id="question14" style="display: none;">
+    </div>
+    <div class="card" id="question14" style="display: none;">
         <h2 class="text-primary">Desafío de Matemáticas</h2>
         <!-- Preguntas (15 en total) -->
         <div class="questions" ">
@@ -366,27 +377,27 @@
             </div>
             <p class="question-text">¿Qué par ordenado no esta graficado a continuación?</p>
             <div class="options">
-                <a class="option correct-answer" href="#">(5,1)</a>
-                <a class="option" href="#">(1,5)</a>
-                <a class="option" href="#">(1,4)</a>
-                <a class="option" href="#">(4,1)</a>
+                <a class="option correct-answer" onclick="checkAnswer(event)" href="#">(5,1)</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">(1,5)</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">(1,4)</a>
+                <a class="option" onclick="checkAnswer(event)" href="#">(4,1)</a>
             </div>
         </div>
     </div>
     <button onclick="showNextQuestion()">Mostrar siguiente pregunta</button>
     </div>
     </div>
-    
+
 
     <script>
         // Función para mostrar una pregunta aleatoria y ocultar las demás
         let shownQuestions = 0; // Contador de preguntas mostradas
-
+        let puntos = 0; // Variable para almacenar los puntos del usuario
+        let answered = false;
         function showNextQuestion() {
             const cards = document.querySelectorAll('.card');
-            // Si se han mostrado las 5 preguntas, redirigir a la página de resultados
             if (shownQuestions === 5) {
-                window.location.href = 'results.html'; // Cambiar 'results.html' a tu página de resultados
+                window.location.href = 'results.html';
             }
             if (shownQuestions < 5) {
                 let randomQuestion;
@@ -396,18 +407,41 @@
 
                 cards.forEach((card) => {
                     if (card.style.display === 'block') {
-                        card.style.display = 'none'; // Oculta la pregunta ya mostrada
+                        card.style.display = 'none';
                     }
                 });
-
                 cards[randomQuestion].style.display = 'block';
                 shownQuestions++;
+                answered = false; // Marcar que se ha respondido a la pregunta
+
             }
+        }
+        function checkAnswer(event) {
 
+            const clickedOption = event.target;
+            const currentCard = clickedOption.closest('.card');
+            const options = currentCard.querySelectorAll('.options .option');
 
+            options.forEach(option => {
+                option.style.pointerEvents = 'none';
+                if (option === clickedOption && option.classList.contains('correct-answer')) {
+                    option.style.backgroundColor = 'green';
+                    puntos++;
+                } else if (option === clickedOption) {
+                    option.style.backgroundColor = 'red';
+                }
+            });
+            console.log(puntos);
+        }
+        function openModal() {
+            const modal = document.getElementById('myModal');
+            modal.style.display = 'block';
         }
 
-        // Mostrar una pregunta al cargar la página
+        function closeModal() {
+            const modal = document.getElementById('myModal');
+            modal.style.display = 'none';
+        }
         showNextQuestion();
     </script>
 </body>
