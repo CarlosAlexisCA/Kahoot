@@ -70,6 +70,25 @@
             border-radius: 5px;
             margin-bottom: 20px;
         }
+
+        button {
+            display: inline-block;
+            padding: 10px 20px;
+            font-size: 16px;
+            font-weight: bold;
+            text-align: center;
+            text-decoration: none;
+            border: none;
+            border-radius: 5px;
+            color: #fff;
+            background-color: #6c757d;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+
+        button:hover {
+            background-color: #343a40;
+        }
     </style>
 </head>
 
@@ -87,7 +106,7 @@
                 </div>
                 <p class="question-text">¿Cuál es el área de la figura?</p>
                 <div class="options">
-                    <a class="option" href="#">6</a>
+                    <a class="option correct-answer" href="#">6</a>
                     <a class="option" href="#">8</a>
                     <a class="option" href="#">5</a>
                     <a class="option" href="#">10</a>
@@ -108,7 +127,7 @@
             <p class="question-text">¿Cuál figura tiene área de 6 centímetros cuadrado?</p>
             <p class="question-text"><img src="" alt="">es 1 centímetro cuadrado. </p>
             <div class="options">
-                <a class="option" href="#">6</a>
+                <a class="option correct-answer" href="#">6</a>
                 <a class="option" href="#">8</a>
                 <a class="option" href="#">5</a>
                 <a class="option" href="#">10</a>
@@ -132,7 +151,7 @@
             <p class="question-text">¿Cuál es el área de la figura?</p>
             <div class="options">
                 <a class="option" href="#">9 unidades Cuadradas</a>
-                <a class="option" href="#">7 unidades Cuadradas</a>
+                <a class="option correct-answer" href="#">7 unidades Cuadradas</a>
                 <a class="option" href="#">15 unidades Cuadradas</a>
                 <a class="option" href="#">3 unidades Cuadradas</a>
             </div>
@@ -155,7 +174,7 @@
                 <a class="option" href="#">20 centímetros cuadrados.</a>
                 <a class="option" href="#">5 centímetros cuadrados.</a>
                 <a class="option" href="#">35 centímetros cuadrados.</a>
-                <a class="option" href="#">12 centímetros cuadrados.</a>
+                <a class="option correct-answer" href="#">12 centímetros cuadrados.</a>
             </div>
         </div>
     </div>
@@ -176,7 +195,7 @@
             <div class="options">
                 <a class="option" href="#">20 Unidades cuadradas.</a>
                 <a class="option" href="#">15 Unidades cuadradas.</a>
-                <a class="option" href="#">10 Unidades cuadradas.</a>
+                <a class="option correct-answer" href="#">10 Unidades cuadradas.</a>
                 <a class="option" href="#">5 Unidades cuadradas.</a>
             </div>
         </div>
@@ -194,7 +213,7 @@
             </div>
             <p class="question-text">Encuentra el valor de x en el siguiente triangulo</p>
             <div class="options">
-                <a class="option" href="">X = 12</a>
+                <a class="option correct-answer" href="">X = 12</a>
                 <a class="option" href="#">X = √24</a>
                 <a class="option" href="#">X = 24</a>
                 <a class="option" href="#">X = √135</a>
@@ -288,17 +307,31 @@
 
     <script>
         // Función para mostrar una pregunta aleatoria y ocultar las demás
+        let shownQuestions = 0; // Contador de preguntas mostradas
+
         function showNextQuestion() {
             const cards = document.querySelectorAll('.card');
-            const randomQuestion = Math.floor(Math.random() * cards.length);
+            // Si se han mostrado las 5 preguntas, redirigir a la página de resultados
+            if (shownQuestions === 5) {
+                window.location.href = 'results.html'; // Cambiar 'results.html' a tu página de resultados
+            }
+            if (shownQuestions < 5) {
+                let randomQuestion;
+                do {
+                    randomQuestion = Math.floor(Math.random() * cards.length);
+                } while (cards[randomQuestion].style.display === 'block');
 
-            cards.forEach((card, index) => {
-                if (index === randomQuestion) {
-                    card.style.display = 'block';
-                } else {
-                    card.style.display = 'none';
-                }
-            });
+                cards.forEach((card) => {
+                    if (card.style.display === 'block') {
+                        card.style.display = 'none'; // Oculta la pregunta ya mostrada
+                    }
+                });
+
+                cards[randomQuestion].style.display = 'block';
+                shownQuestions++;
+            }
+
+
         }
 
         // Mostrar una pregunta al cargar la página
